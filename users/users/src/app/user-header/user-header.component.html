@@ -5,25 +5,25 @@
     <div class="d-flex">
       <!-- Brand -->
       <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-        <img 
-          src="https://www.shutterstock.com/image-vector/elearning-concept-logo-learning-online-260nw-2146465059.jpg"
-          height="30" 
-          alt="MDB Logo" 
-          loading="lazy" 
-          style="margin-top: 2px;" />
-        <h3 
+        <h4
           style="margin: 0px; padding: 0px;" 
-          class="light-text">
+          class="logo">
             LEARN
-        </h3>
+        </h4>
       </a>
     </div>
     <!-- Left elements -->
 
+    <!-- toggle menue -->
+    <a class="nav-link d-sm-flex align-items-sm-center nav-routes" (click)="toggleSidebar()">
+      <fa-icon [icon]="faHumbergerMenue" class="toggle-menue hide-menue"></fa-icon>
+    </a>
+    <!-- /toggle menue -->
+
     <!-- Right elements -->
     <ul class="navbar-nav flex-row hide">
 
-      <li class="nav-item me-3 me-lg-1">
+      <li class="nav-item me-3 me-lg-1 nav-routes">
         <a class="nav-link d-sm-flex align-items-sm-center" href="#">
           <img
             src="https://e7.pngegg.com/pngimages/48/511/png-clipart-computer-icons-home-home-angle-text-thumbnail.png"
@@ -35,10 +35,10 @@
         </a>
       </li>
 
-      <li class="nav-item me-3 me-lg-1">
+      <li class="nav-item me-3 me-lg-1 nav-routes">
         <a class="nav-link d-sm-flex align-items-sm-center" href="#">
           <img
-            src="https://thumbs.dreamstime.com/b/book-icon-black-circle-simple-literature-reading-newspaper-128431270.jpg"
+            src="https://previews.123rf.com/images/juliarstudio/juliarstudio1602/juliarstudio160201033/51642835-human-brain-black-simple-icon-isolated-on-white-background.jpg"
             class="rounded-circle" 
             height="22" 
             alt="Black and White Portrait of a Man" 
@@ -47,7 +47,7 @@
         </a>
       </li>
 
-      <li class="nav-item me-3 me-lg-1">
+      <li class="nav-item me-3 me-lg-1 nav-routes">
         <a class="nav-link d-sm-flex align-items-sm-center" href="#">
           <img 
             src="https://png.pngtree.com/png-vector/20190420/ourmid/pngtree-call-vector-icon-png-image_964007.jpg"
@@ -59,8 +59,8 @@
         </a>
       </li>
 
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+      <li class="nav-item me-3 me-lg-1 nav-routes" *ngIf="loggedIn">
+        <a class="nav-link d-sm-flex align-items-sm-center">
           <img 
             src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" 
             class="rounded-circle" 
@@ -68,6 +68,18 @@
             alt="Black and White Portrait of a Man" 
             loading="lazy" />
           <strong class="d-none d-sm-block ms-1 light-text">My Account</strong>
+        </a>
+      </li>
+
+      <li class="nav-item me-3 me-lg-1 nav-routes" *ngIf="!loggedIn">
+        <a class="nav-link d-sm-flex align-items-sm-center">
+          <img 
+            src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" 
+            class="rounded-circle" 
+            height="22"
+            alt="Black and White Portrait of a Man" 
+            loading="lazy" />
+          <strong class="d-none d-sm-block ms-1 light-text">Authenticate</strong>
         </a>
       </li>
     </ul>
