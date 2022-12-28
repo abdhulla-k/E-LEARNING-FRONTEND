@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 import { ControllerService } from 'src/app/controller.service';
 
 @Component({
@@ -11,7 +13,10 @@ export class UserSignupComponent implements OnInit, OnDestroy {
   ableButton = false; // to disable and able signup button
   loginPasswordStrength!: Subscription;
 
-  constructor( private controllerService: ControllerService) { }
+  constructor( 
+    private controllerService: ControllerService, 
+    private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
     this.loginPasswordStrength = this.controllerService.loginPasswordStrength.subscribe( data => {
