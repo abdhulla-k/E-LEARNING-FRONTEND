@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { ControllerService } from '../controller.service';
+import { ControllerService } from '../../controller.service';
 
 @Component({
   selector: 'app-user-header',

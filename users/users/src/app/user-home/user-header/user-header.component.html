@@ -71,7 +71,7 @@
         </a>
       </li>
 
-      <li class="nav-item me-3 me-lg-1 nav-routes" *ngIf="!loggedIn">
+      <li class="nav-item me-3 me-lg-1 nav-routes" *ngIf="!loggedIn" [routerLink]="['/user/login']">
         <a class="nav-link d-sm-flex align-items-sm-center">
           <img 
             src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" 
