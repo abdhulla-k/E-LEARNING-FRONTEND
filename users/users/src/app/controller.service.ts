@@ -7,4 +7,5 @@ export class ControllerService {
 
   // constructor() { }
   sideNavToggler = new EventEmitter();
+  loginPasswordStrength = new EventEmitter();
 }
