@@ -13,6 +13,7 @@ import { UserLoginComponent } from './auth/user-login/user-login.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { UserSignupComponent } from './auth/user-signup/user-signup.component';
 import { PasswordValidatingDirective } from './shared/directives/password-validate.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PasswordValidatingDirective } from './shared/directives/password-valida
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
