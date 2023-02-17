@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="https://thumbs.dreamstime.com/z/e-learning-logo-vector-concept-online-center-graduation-illustration-flat-design-abstract-background-education-97659237.jpg">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>E-Learning Application</title>
 
   <!--
     Remove this if you only support browsers that support async/await.
@@ -48,7 +49,10 @@
     {
       "imports": {
         "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@e-learning/root-config": "//localhost:9000/e-learning-root-config.js"
+        "@e-learning/root-config": "//localhost:9000/e-learning-root-config.js",
+        "@e-learning/user-app": "//localhost:4200/main.js",
+        "@e-learning/admin-app": "//localhost:4201/main.js",
+        "@e-learning/instructor-app": "//localhost:4202/main.js"
       }
     }
   </script>
@@ -58,7 +62,7 @@
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>
