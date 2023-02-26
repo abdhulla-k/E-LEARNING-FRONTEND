@@ -1,6 +1,7 @@
 {
   "name": "@e-learning/root-config",
   "scripts": {
+    "start-server": "node server.js",
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
@@ -44,6 +45,8 @@
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "single-spa": "^5.9.3",
     "single-spa-layout": "^1.6.0"
   },
